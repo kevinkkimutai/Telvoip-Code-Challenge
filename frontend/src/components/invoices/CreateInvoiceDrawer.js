@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { closeNewInvoiceDrawer } from '@/redux/slices/uiSlice'
 import { XMarkIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:7200/api/v1'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://telvoip-code-challenge-9z36.vercel.app/api/v1'
 
 export default function CreateInvoiceDrawer() {
   const dispatch = useDispatch()
