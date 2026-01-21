@@ -5,7 +5,7 @@ import { TrendingUp, DollarSign, Users, FileText, Calendar, Download } from 'luc
 import StatsCard from '@/components/dashboard/StatsCard'
 import Badge from '@/components/ui/Badge'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://telvoip-code-challenge-9z36.vercel.app/api/v1'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://telvoip-code-challenge.fly.dev/api/v1'
 
 export default function ReportsPage() {
   const [payments, setPayments] = useState([])

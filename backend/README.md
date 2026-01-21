@@ -59,11 +59,11 @@ A powerful Express.js backend for the QuickPay Invoicing Dashboard with Supabase
    npm start
    ```
 
-The server will be running at `https://telvoip-code-challenge-9z36.vercel.app/`
+The server will be running at `https://telvoip-code-challenge.fly.dev/`
 
 ## API Endpoints
 
-### Base URL: `https://telvoip-code-challenge-9z36.vercel.app/api/v1`
+### Base URL: `https://telvoip-code-challenge.fly.dev/api/v1`
 
 ### Health Check
 - `GET /health` - Server health status
@@ -99,7 +99,7 @@ The server will be running at `https://telvoip-code-challenge-9z36.vercel.app/`
 
 ### Create a new invoice
 ```bash
-curl -X POST https://telvoip-code-challenge-9z36.vercel.app/api/v1/invoices \
+curl -X POST https://telvoip-code-challenge.fly.dev/api/v1/invoices \
   -H "Content-Type: application/json" \
   -d '{
     "client_id": "uuid-here",
@@ -117,12 +117,12 @@ curl -X POST https://telvoip-code-challenge-9z36.vercel.app/api/v1/invoices \
 
 ### Get dashboard statistics
 ```bash
-curl https://telvoip-code-challenge-9z36.vercel.app/api/v1/stats/dashboard
+curl https://telvoip-code-challenge.fly.dev/api/v1/stats/dashboard
 ```
 
 ### Update payment status
 ```bash
-curl -X PATCH https://telvoip-code-challenge-9z36.vercel.app/api/v1/payments/uuid-here \
+curl -X PATCH https://telvoip-code-challenge.fly.dev/api/v1/payments/uuid-here \
   -H "Content-Type: application/json" \
   -d '{"status": "paid"}'
 ```

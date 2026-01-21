@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'https://telvoip-code-challenge-9z36.vercel.app/api'
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'https://telvoip-code-challenge.fly.dev/api'
 
 // Async thunks for invoice operations
 export const createInvoice = createAsyncThunk(
