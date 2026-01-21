@@ -52,7 +52,7 @@ export default function StatsCards() {
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'KES'
     }).format(amount)
   }
   

@@ -6,10 +6,10 @@ export default function ViewInvoiceDrawer({ isOpen, onClose, invoice }) {
   if (!invoice) return null
 
   const formatCurrency = (amount) => {
-    if (!amount && amount !== 0) return '$0.00'
+    if (!amount && amount !== 0) return 'KSH 0.00'
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'KES'
     }).format(amount)
   }
 
@@ -187,13 +187,8 @@ export default function ViewInvoiceDrawer({ isOpen, onClose, invoice }) {
           {/* Action Buttons */}
           <div className="space-y-3">
             <div className="flex gap-3">
-              <button
-                onClick={handleMarkAsPaid}
-                className="flex-1 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
-              >
-                Mark as Paid
-              </button>
-              <button
+              
+              {/* <button
                 onClick={handleMarkAsPending}
                 className="flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors"
               >
@@ -204,10 +199,10 @@ export default function ViewInvoiceDrawer({ isOpen, onClose, invoice }) {
                 className="flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors"
               >
                 Mark as Overdue
-              </button>
+              </button> */}
             </div>
             <div className="flex gap-3">
-              <button
+              {/* <button
                 onClick={handleDownloadPDF}
                 className="flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
               >
@@ -220,6 +215,12 @@ export default function ViewInvoiceDrawer({ isOpen, onClose, invoice }) {
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Send Reminder
+              </button> */}
+              <button
+                onClick={handleMarkAsPaid}
+                className="flex-1 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+              >
+                Mark as Paid
               </button>
               <button
                 onClick={handleDelete}

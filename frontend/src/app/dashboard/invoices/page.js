@@ -32,7 +32,7 @@ export default function InvoicesPage() {
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'KES'
     }).format(amount)
   }
 

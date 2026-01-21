@@ -6,10 +6,10 @@ export default function ViewClientDrawer({ isOpen, onClose, client, onEdit, onDe
   if (!client) return null
 
   const formatCurrency = (amount) => {
-    if (!amount && amount !== 0) return '$0.00'
+    if (!amount && amount !== 0) return 'KSH 0.00'
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'KES'
     }).format(parseFloat(amount))
   }
 

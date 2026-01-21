@@ -108,7 +108,7 @@ export default function PaymentsTable({ showPagination = true, limit = 10 }) {
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'KES'
     }).format(amount)
   }
 

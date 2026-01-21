@@ -4,12 +4,14 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://demo.supabase.co'
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'demo-key'
 
-// For development - create a mock client if env vars are not set
-const isDevelopment = process.env.NODE_ENV === 'development'
+// Check if we have valid Supabase configuration
 const hasValidConfig = supabaseUrl.includes('supabase.co') && supabaseAnonKey.length > 20
 
-if (!hasValidConfig && !isDevelopment) {
-  throw new Error('Missing Supabase environment variables. Please check your .env.local file.')
+// Log warning if config is not valid, but don't throw during build
+if (!hasValidConfig) {
+  if (typeof window !== 'undefined') {
+    console.warn('⚠️ Missing Supabase environment variables. Please check your .env.local file.')
+  }
 }
 
 // Create Supabase client (or mock client for development)

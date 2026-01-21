@@ -139,19 +139,19 @@ export default function ReportsPage() {
   const stats = [
     {
       title: 'Total Revenue',
-      value: `$${totalRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`,
+      value: `KSH ${totalRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`,
       icon: DollarSign,
       trend: { value: 12, isPositive: true }
     },
     {
       title: 'Completed Revenue',
-      value: `$${completedRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`,
+      value: `KSH ${completedRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`,
       icon: TrendingUp,
       trend: { value: 8, isPositive: true }
     },
     {
       title: 'Average Invoice',
-      value: `$${averageInvoiceValue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`,
+      value: `KSH ${averageInvoiceValue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`,
       icon: FileText,
       trend: { value: 5, isPositive: true }
     },

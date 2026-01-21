@@ -46,13 +46,13 @@ export default function Header() {
         {/* Right side */}
         <div className="flex items-center space-x-4">
           {/* New Invoice button */}
-          <Button 
+          {/* <Button 
             variant="primary" 
             onClick={() => dispatch({ type: 'ui/openNewInvoiceDrawer' })}
           >
             <PlusIcon className="h-4 w-4 mr-2" />
             New Invoice
-          </Button>
+          </Button> */}
           
           {/* Notifications */}
           <button className="relative text-gray-500 hover:text-gray-700">

@@ -7,10 +7,10 @@ export default function ViewPaymentDrawer({ isOpen, onClose, payment }) {
   if (!payment) return null
 
   const formatCurrency = (amount) => {
-    if (!amount && amount !== 0) return '$0.00'
+    if (!amount && amount !== 0) return 'KSH 0.00'
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'KES'
     }).format(parseFloat(amount))
   }
 
@@ -152,7 +152,7 @@ export default function ViewPaymentDrawer({ isOpen, onClose, payment }) {
             <div className="bg-gray-50 rounded-lg p-4 space-y-3">
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">Currency</span>
-                <span className="text-sm font-medium text-gray-900">{payment.currency || 'USD'}</span>
+                <span className="text-sm font-medium text-gray-900">{payment.currency || 'KSH'}</span>
               </div>
               
               {payment.paymentMethod && (
@@ -258,12 +258,7 @@ export default function ViewPaymentDrawer({ isOpen, onClose, payment }) {
           {/* Action Buttons */}
           <div className="space-y-3">
             <div className="flex gap-3">
-              <button
-                onClick={handleMarkAsPaid}
-                className="flex-1 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
-              >
-                Mark as Paid
-              </button>
+{/*              
               <button
                 onClick={handleMarkAsPending}
                 className="flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors"
@@ -275,10 +270,10 @@ export default function ViewPaymentDrawer({ isOpen, onClose, payment }) {
                 className="flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors"
               >
                 Mark as Overdue
-              </button>
+              </button> */}
             </div>
             <div className="flex gap-3">
-              <button
+              {/* <button
                 onClick={handleDownloadPDF}
                 className="flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
               >
@@ -291,6 +286,12 @@ export default function ViewPaymentDrawer({ isOpen, onClose, payment }) {
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Send Reminder
+              </button> */}
+               <button
+                onClick={handleMarkAsPaid}
+                className="flex-1 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+              >
+                Mark as Paid
               </button>
               <button
                 onClick={handleDelete}

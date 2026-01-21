@@ -30,7 +30,7 @@ export default function SettingsPage() {
   })
 
   const [paymentSettings, setPaymentSettings] = useState({
-    currency: 'USD',
+    currency: 'KES',
     taxRate: '10',
     lateFee: '5',
     paymentTerms: '30'
