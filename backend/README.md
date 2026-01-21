@@ -42,7 +42,7 @@ A powerful Express.js backend for the QuickPay Invoicing Dashboard with Supabase
    SUPABASE_ANON_KEY=your-anon-key
    PORT=7200
    NODE_ENV=development
-   CORS_ORIGIN=http://localhost:3000
+   CORS_ORIGIN=https://telvoip-code-challenge.vercel.app
    ```
 
 4. **Set up the database**
@@ -155,7 +155,7 @@ See `database/schema.sql` for the complete schema with indexes, constraints, and
 | `SUPABASE_ANON_KEY` | Anonymous key | Optional |
 | `PORT` | Server port | 7200 |
 | `NODE_ENV` | Environment mode | development |
-| `CORS_ORIGIN` | Frontend URL | http://localhost:3000 |
+| `CORS_ORIGIN` | Frontend URL | https://telvoip-code-challenge.vercel.app |
 | `RATE_LIMIT_WINDOW_MS` | Rate limit window | 900000 (15 min) |
 | `RATE_LIMIT_MAX_REQUESTS` | Max requests per window | 100 |
 
